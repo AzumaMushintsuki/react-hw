@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {ICharacterProps} from "../models/ICharacterProps.ts";
+import {ICharacterProps} from "../../models/ICharacterProps.ts";
 import './CharacterComponent.css'
 
 const CharacterComponent: FC<ICharacterProps> = ({character, children}) => {

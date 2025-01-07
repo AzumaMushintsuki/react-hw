@@ -1,7 +1,7 @@
 import {FC} from 'react';
-import {simpsons} from "../data/simpsons.ts";
-import CharacterComponent from "./CharacterComponent.tsx";
-import {ISimpson} from "../models/ISimpson.ts";
+import {simpsons} from "../../data/simpsons.ts";
+import CharacterComponent from "../character-component/CharacterComponent.tsx";
+import {ISimpson} from "../../models/ISimpson.ts";
 import './FamilyComponent.css'
 
 const FamilyComponent:FC = () => {
