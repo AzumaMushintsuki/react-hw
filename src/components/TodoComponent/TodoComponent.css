@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    height: 230px;
+    width: 200px;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.inner-div {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.done {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: lightgray;
+    border: 2px solid #272727;
+    color: dimgray;
+}
+
+.notDone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: lavenderblush;
+    border: 2px solid maroon;
+}
