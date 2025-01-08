@@ -6,7 +6,7 @@ const TodoComponent = ({item}: ITodoProps) => {
         <div className={item.completed ? 'done' : 'notDone'}>
             <div className='inner-div'>
                 <h2>ID: {item.id}</h2>
-                <h3>{item.title}</h3>
+                <h3>{item.todo}</h3>
             </div>
             <h5>This task was created by user {item.userId}</h5>
         </div>

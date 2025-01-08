@@ -1,6 +1,13 @@
 export interface ITodo {
-    userId: number;
-    id: number;
-    title: string;
-    completed: boolean;
+  id: number;
+  todo: string;
+  completed: boolean;
+  userId: number;
+}
+
+export interface IApiResponse {
+  todos: ITodo[];
+  total: number;
+  skip: number;
+  limit: number;
 }
