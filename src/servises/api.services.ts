@@ -7,7 +7,7 @@ export const userService = {
         console.log(import.meta.env.VITE_BASE_URL + '/users')
         return await fetch(import.meta.env.VITE_BASE_URL + '/users')
             .then(res=>res.json())
-            .then(res=>{console.log(res, res.users); return res.users})
+            .then(res=>res.users)
     }
 };
 
