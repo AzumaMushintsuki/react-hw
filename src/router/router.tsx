@@ -1,10 +1,14 @@
 import {createBrowserRouter} from "react-router";
-import UsersCardsList from "../components/users-list-creator/UsersCardsList.tsx";
 import MainLayout from "../layouts/MainLayout.tsx";
+import UsersPage from "../pages/UsersPage.tsx";
+import PostsPage from "../pages/PostsPage.tsx";
+import HomePage from "../pages/HomePage.tsx";
 
 export const router= createBrowserRouter([
     {path:'/', element: <MainLayout/>,
         children:[
-            {path:'users', element:<UsersCardsList/>}
+            {path:'users', element:<UsersPage/>},
+            {path:'posts', element: <PostsPage/>},
+            {index: true, element: <HomePage/>}
         ]}
 ])

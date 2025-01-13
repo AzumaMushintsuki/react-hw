@@ -3,7 +3,7 @@ import {userService} from "../../servises/api.services.ts";
 import {IUser} from "../../models/IUser.ts";
 import UserCard from "./UserCard.tsx";
 
-const UsersCardsList = () => {
+const UserCardList = () => {
     const [users, setUsers]=useState<IUser[]>([])
     useEffect(()=>{
         userService.getUsers().then(apiUsers=>setUsers(apiUsers))
@@ -16,4 +16,4 @@ const UsersCardsList = () => {
     );
 };
 
-export default UsersCardsList;
+export default UserCardList;
