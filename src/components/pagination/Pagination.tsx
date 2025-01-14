@@ -7,7 +7,7 @@ const Pagination = () => {
     const [totalUsers, setTotalUsers] = useState<number>(0)
     useEffect(() => {
         getUsers('1').then(res=> setTotalUsers(res.total))
-    }, [totalUsers]);
+    }, []);
     const [query, setQuery]= useSearchParams({page:'1'})
     const handlerNextOnClick= ()=>{
         const page = query.get('page');
