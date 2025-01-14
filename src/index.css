@@ -1,0 +1,16 @@
+.user-card{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid lightgray;
+}
+.users-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}

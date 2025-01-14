@@ -19,8 +19,8 @@ export const postService= {
     }
 }
 export const cartService = {
-    getCartsByUser: async (id:number):Promise<ICart[] | null> =>{
-        return await fetch(import.meta.env.VITE_BASE_URL + '/carts/user/' + {id})
+    getCartsByUser: async (id:string):Promise<ICart[] | null> =>{
+        return await fetch(import.meta.env.VITE_BASE_URL + '/carts/user/' + id)
             .then(res=>res.json())
             .then(res=>res.carts)
     }

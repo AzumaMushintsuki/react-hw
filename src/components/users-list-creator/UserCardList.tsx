@@ -7,10 +7,9 @@ const UserCardList = () => {
     const [users, setUsers]=useState<IUser[]>([])
     useEffect(()=>{
         userService.getUsers().then(apiUsers=>setUsers(apiUsers))
-        console.log(users)
     },[])
     return (
-        <div>
+        <div className='users-list'>
             {users.map(user=><UserCard key = {user.id} user={user}/>)}
         </div>
     );
