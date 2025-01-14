@@ -8,9 +8,9 @@ import UserCard from "./UserCard.tsx";
 const UsersList = () => {
     const [users,setUsers]=useState<IUser[]>([]);
     const [query]=useSearchParams();
-    useEffect(()=>{
-        getUsers(query.get('page')||`1`)
-            .then(res=>setUsers(res.users))
+    useEffect(()=> {
+        getUsers(query.get('page')||'1')
+            .then(users=>setUsers(users))
     },[query])
     return (
         <div>

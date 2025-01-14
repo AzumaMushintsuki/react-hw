@@ -1,17 +1,12 @@
-import {useSearchParams} from "react-router-dom";
-import {useEffect, useState} from "react";
-import {getUsers} from "../../services/api.services.ts";
+import {useSearchParams} from "react-router-dom"
 
 
 const Pagination = () => {
-    const [totalUsers, setTotalUsers] = useState<number>(0)
-    useEffect(() => {
-        getUsers('1').then(res=> setTotalUsers(res.total))
-    }, []);
+    const totalUsers= localStorage.getItem('total')||40
     const [query, setQuery]= useSearchParams({page:'1'})
     const handlerNextOnClick= ()=>{
         const page = query.get('page');
-        if(page && +page<totalUsers/30){
+        if(page && +page < +totalUsers/30){
             let currentPage = +page;
             setQuery({page:(++currentPage).toString()})
         }
