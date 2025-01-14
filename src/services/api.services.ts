@@ -1,7 +1,7 @@
-import {IUser} from "../models/IUser.ts";
 
-export const getUsers = async (page:string):Promise<IUser[]> =>{
-    return await fetch('https://dummyjson.com/users?skip='+(+page-1)*30)
-        .then(res=> res.json())
-        .then(res=>res.users)
+import {IResponse} from "../models/IResponse.ts";
+
+export const getUsers = async (page:string):Promise<IResponse> => {
+    return await fetch('https://dummyjson.com/users?skip=' + (+page - 1) * 30)
+        .then(res => res.json())
 }

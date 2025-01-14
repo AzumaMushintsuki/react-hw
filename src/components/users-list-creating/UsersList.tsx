@@ -10,7 +10,7 @@ const UsersList = () => {
     const [query]=useSearchParams();
     useEffect(()=>{
         getUsers(query.get('page')||`1`)
-            .then(res=>setUsers(res))
+            .then(res=>setUsers(res.users))
     },[query])
     return (
         <div>
