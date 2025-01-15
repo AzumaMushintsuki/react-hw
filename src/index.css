@@ -1,0 +1,18 @@
+.car-card{
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid maroon;
+    border-radius: 6px ;
+    background: indianred;
+}
+.cars-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
